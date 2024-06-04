@@ -1,0 +1,21 @@
+# article.params.x=01
+# article.params.y=02
+# global.params.p2=99
+# server:
+#   port: 8082
+
+spring:
+  application:
+    name: donArticle
+  jpa:
+    hibernate:
+      ddl-auto: update  
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/donArticle
+    username: donArticle
+    password: donArticle
+  
