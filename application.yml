@@ -16,12 +16,13 @@ spring:
   cloud:
     discovery:
       enabled: true
-  profiles:
-    active: dev  # Changez en 'prod' pour production
+    config:
+      enabled: false
+#  profiles:
+#    active: dev  # Changez en 'prod' pour production
 
 jwt:
   secret: N1qpK2aWQx8uTnR7P9mB0kZz3D5aXjL6Y2wR8vG4cH1uTnV0lMbC7rF9hJ5qL3pN
-
 
 management:
   endpoints:
@@ -35,8 +36,10 @@ logging:
   level:
     org.springframework.security: DEBUG
     org.springframework.web: DEBUG
-
 eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/

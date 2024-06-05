@@ -13,34 +13,11 @@ spring:
     url: jdbc:mysql://localhost:3306/donDemande
     username: donDemande
     password: donDemande
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: ena.webena@gmail.com
-    password: gunnejizbxpmccba
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
+
   security:
     enabled: false
-  cloud:
-    discovery:
-      enabled: true
-  profiles:
-    active: dev  # Changez en 'prod' pour production
-
-  jwt:
-    secret: N1qpK2aWQx8uTnR7P9mB0kZz3D5aXjL6Y2wR8vG4cH1uTnV0lMbC7rF9hJ5qL3pN
 
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
 #  endpoint:
 #    gateway:
 #      enabled: true

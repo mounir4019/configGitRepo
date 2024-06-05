@@ -13,24 +13,16 @@ spring:
           uri: lb://donDemande
           predicates:
             - Path=/demandes/**            
-    discovery:
-      enabled: true
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
   endpoint:
     gateway:
       enabled: true
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    org.springframework.web: DEBUG
+      defaultZone: ${DISCOVERY_SERVICE_URL:http://localhost:8761/eureka}
+
 
 
