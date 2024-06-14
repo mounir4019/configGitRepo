@@ -12,7 +12,11 @@ spring:
         - id: r2
           uri: lb://donDemande
           predicates:
-            - Path=/demandes/**            
+            - Path=/demandes/** 
+        - id: r3
+          uri: lb://donAuth
+          predicates:
+            - Path=//api/login                        
 
   endpoint:
     gateway:
