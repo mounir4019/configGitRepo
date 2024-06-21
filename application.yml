@@ -14,8 +14,8 @@ spring:
   security:
     enabled: false
   cloud:
-    discovery:
-      enabled: true
+#    discovery:
+#      enabled: true
     config:
       enabled: false
 #  profiles:
