@@ -16,7 +16,7 @@ spring:
     show-sql: true
   
   datasource:
-    url: jdbc:mariadb:${DBDONARTICLE://localhost:3306/donarticle}
+    url: jdbc:mariadb://${DBDONARTICLE://localhost:3306/donarticle}
     username: donArticle
     password: donArticle
   security:
